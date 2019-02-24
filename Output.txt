@@ -1,0 +1,31 @@
+Scanning log data, please wait!
+
+Here is the report on:
+
+1. Most popular three articles of all time as of 2019-02-24 12:37.
+
+--The article with the title: "Candidate is jerk, alleges rival" has got 338647 views.
+
+--The article with the title: "Bears love berries, alleges bear" has got 253801 views.
+
+--The article with the title: "Bad things gone, say good people" has got 170098 views.
+
+Scanning log data, please wait!
+
+Here is the report on:
+
+2. Most popular article authors of all time as of 2019-02-24 12:37.
+
+--The author: "Ursula La Multa" has got 507594 views for their article.
+
+--The author: "Rudolf von Treppenwitz" has got 423457 views for their article.
+
+--The author: "Anonymous Contributor" has got 170098 views for their article.
+
+Scanning log data, please wait!
+
+Here is the report on:
+
+3. Days which had more than 1 percent of requests which lead to errors as of 2019-02-24 12:37.
+
+--This day: "July 17, 2016" has observed 2.26% of request errors.
