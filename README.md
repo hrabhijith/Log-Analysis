@@ -8,7 +8,9 @@ This tool generates three reports on a specific front end application usage usin
 
 The source code is written in the "log.py" file and should be run from linux machine which has PSQL installed.
 
-According to the python version installed, the code can be run using either
+According to the python version installed, the code can be run 
+
+using either
 `python log.py`
 
 or using 
