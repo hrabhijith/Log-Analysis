@@ -1,15 +1,28 @@
-#! /usr/bin/python -3.5.2
+# !/usr/bin/env python3
+# !/usr/bin/python -3.5.2
 
 import psycopg2
 import datetime
+import sys
 
 DBNAME = 'news'
 
 now = datetime.datetime.now()
 
 
+def dbConnect():
+    try:
+        db = psycopg2.connect(database=DBNAME)
+    except psycopg2.Error as e:
+        print("Unable to connect to the database")
+        print(e.pgerror)
+        print(e.diag.message_detail)
+        sys.exit(1)
+    return db
+
+
 def firstQuery():
-    db = psycopg2.connect(database=DBNAME)
+    db = dbConnect()
     c = db.cursor()
     print("Scanning log data, please wait!\n")
     c.execute('''select a.title, count(l.path) as num
@@ -40,7 +53,7 @@ firstQueryResult()
 
 
 def secondQuery():
-    db = psycopg2.connect(database=DBNAME)
+    db = dbConnect()
     c = db.cursor()
     print("Scanning log data, please wait!\n")
     c.execute('''select a.name, b.view_count
@@ -71,7 +84,7 @@ secondQueryResult()
 
 
 def thirdQuery():
-    db = psycopg2.connect(database=DBNAME)
+    db = dbConnect()
     c = db.cursor()
     print("Scanning log data, please wait!\n")
     c.execute('''select to_char(date_all::date, 'FMMonth DD, YYYY')
